@@ -1,0 +1,30 @@
+﻿{
+	"manifest_version": 2,
+	"name": "Youtube PlaySpeed Changer",
+	"version": "1.0",
+
+	"permissions": [
+		"tabs"
+	],
+
+	"page_action": {
+		"default_icon": "icon.png", 
+		"default_title": "Youtube PlaySpeed Changer",
+		"default_popup": "popup.html" 
+	},
+
+  	"background": {
+		"scripts": ["js/background.js"]
+	},
+
+	"content_scripts": [
+		{
+			"matches": [
+				"http://www.youtube.com/watch*",
+				"https://www.youtube.com/watch*"
+			],
+			"js": ["js/jquery-1.11.1.js", "js/contentscript.js"],
+			"run_at": "document_end"
+		}
+	]
+}
