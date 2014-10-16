@@ -30,29 +30,14 @@ var VideoPlayer = function () {
         console.log("プレイヤーの初期化が完了しました。");
     };
 
-    // データの読み込み開始のタイミングで source ノードを生成
-    //$(this.video).on('loadeddata', initPlayer);
-    // データの読み込み開始のタイミングで source ノードを生成
-    //this.video.addEventListener('loadstart', function () {
-    //    initPlayer();
-    //}, false);
-
     // イベントが取れないのでタイマ処理
     setTimeout(initPlayer, 500);
-};
-
-// ページ起動時処理の
-window.onload = function () {
-    // Popup で表示するために background.js へ転送
-    chrome.runtime.sendMessage(
-        { "VideoTitle": $('#eow-title').html() },
-        function (response) { }
-    );
 };
 
 // background からのメッセージ受信処理               
 chrome.extension.onRequest.addListener(
     function (request, sender, sendResponse) {
+        console.log(request);
         if (request.cmd === "init" && (typeof videoPlayer) === 'undefined') {
             videoPlayer = new VideoPlayer();
         }
