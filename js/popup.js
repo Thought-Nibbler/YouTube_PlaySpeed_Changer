@@ -1,8 +1,8 @@
-// background.js ‚Ìƒf[ƒ^‚ğQÆ
+ï»¿// background.js ã®ãƒ‡ãƒ¼ã‚¿ã‚’å‚ç…§
 var BG = chrome.extension.getBackgroundPage();
 
 $(function () {
-    // Ä¶‘¬“x‚ÌƒXƒ‰ƒCƒhƒo[‚ÌƒXƒ‰ƒCƒhƒCƒxƒ“ƒg
+    // å†ç”Ÿé€Ÿåº¦ã®ã‚¹ãƒ©ã‚¤ãƒ‰ãƒãƒ¼ã®ã‚¹ãƒ©ã‚¤ãƒ‰ã‚¤ãƒ™ãƒ³ãƒˆ
     $('#speed').on('input', function () {
         var v = parseFloat($(this).val());
 
