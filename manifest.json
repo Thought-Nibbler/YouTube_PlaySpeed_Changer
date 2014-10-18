@@ -1,7 +1,12 @@
 ﻿{
 	"manifest_version": 2,
 	"name": "Youtube PlaySpeed Changer",
-	"version": "1.0",
+	"version": "1.0.0",
+	"description": "YouTube 動画の再生速度を % 単位で変更します。",
+	"icons": {
+		"16": "icon.png",
+		"128": "icon128x128.png"
+	},
 
 	"permissions": [
 		"tabs"
@@ -21,10 +26,11 @@
 		{
 			"matches": [
 				"*://*/*"
-				//"http://www.youtube.com/watch*",
-				//"https://www.youtube.com/watch*"
 			],
-			"js": ["js/jquery-1.11.1.js", "js/contentscript.js"],
+			"js": [
+				"js/jquery-1.11.1.js", 
+				"js/contentscript.js"
+			],
 			"run_at": "document_end"
 		}
 	]

@@ -37,7 +37,7 @@ var VideoPlayer = function () {
 // background からのメッセージ受信処理               
 chrome.extension.onRequest.addListener(
     function (request, sender, sendResponse) {
-        console.log(request);
+        //console.log(request);
         if (request.cmd === "init" && (typeof videoPlayer) === 'undefined') {
             videoPlayer = new VideoPlayer();
         }
